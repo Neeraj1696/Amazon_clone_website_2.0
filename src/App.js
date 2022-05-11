@@ -3,18 +3,22 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import Checkout from "./components/Checkout";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
+import React from "react";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <>
+        <Header />
         <Routes>
-          <Route path="/" index element={<Header />} />
+          <Route path="/home" index element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/checkout" element={<Checkout />}></Route>
         </Routes>
-      </BrowserRouter>
+      </>
     </div>
   );
 }
