@@ -13,7 +13,7 @@ function Home() {
       <Product
         id="123456"
         title="Product Title"
-        price={11}
+        price={10}
         rating={5}
         image="error_home_image"
       />
